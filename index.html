@@ -192,6 +192,132 @@
         .stats-total-value.invest { color: #5DADE2; }
         .stats-total-value.saving { color: #4ade80; }
         .no-data-message { text-align: center; padding: 40px; color: #666; font-size: 14px; }
+
+        /* ========== 모바일 최적화 ========== */
+        @media (max-width: 480px) {
+            body { padding: 12px; }
+            
+            /* 헤더 */
+            header h1 { font-size: 22px; }
+            .user-info { flex-wrap: wrap; gap: 8px; font-size: 13px; }
+            .exchange-rate { font-size: 13px; }
+            
+            /* 카드 */
+            .card { padding: 16px; border-radius: 12px; }
+            .card-title { font-size: 14px; margin-bottom: 12px; }
+            
+            /* 월급 입력 */
+            .salary-input { font-size: 20px; padding: 12px 14px; }
+            .won { font-size: 16px; }
+            
+            /* 비율 슬라이더 */
+            .ratio-section { margin-top: 16px; }
+            .ratio-item { margin-bottom: 16px; }
+            .ratio-label { font-size: 13px; }
+            .ratio-value-input { width: 65px; font-size: 13px; padding: 3px 6px; }
+            .ratio-amounts { font-size: 11px; }
+            .ratio-slider::-webkit-slider-thumb { width: 24px; height: 24px; }
+            
+            /* 탭 */
+            .tab-container { gap: 2px; padding: 3px; }
+            .tab-btn { padding: 10px 8px; font-size: 12px; }
+            
+            /* 투자 종목 리스트 */
+            .stock-item { padding: 12px; gap: 10px; flex-wrap: wrap; }
+            .stock-icon { width: 36px; height: 36px; font-size: 14px; border-radius: 8px; }
+            .stock-name { font-size: 13px; }
+            .stock-percent { font-size: 11px; }
+            .stock-krw { font-size: 13px; }
+            .stock-usd { font-size: 11px; }
+            .stock-percent-input { width: 50px; padding: 6px; font-size: 13px; }
+            .stock-delete { padding: 6px; font-size: 16px; }
+            .add-stock-btn { padding: 12px; font-size: 13px; }
+            
+            /* 적금 항목 */
+            .saving-item { padding: 12px; }
+            .saving-icon { width: 32px; height: 32px; }
+            .saving-name { font-size: 13px; }
+            .saving-amount { font-size: 13px; }
+            
+            /* 버튼 */
+            .purchase-complete-btn { padding: 14px; font-size: 14px; }
+            
+            /* 요약 그리드 */
+            .summary-grid { gap: 10px; }
+            .summary-item { padding: 14px 10px; }
+            .summary-label { font-size: 11px; }
+            .summary-value { font-size: 16px; }
+            
+            /* 수기 입력 */
+            .manual-row { flex-direction: column; gap: 10px; }
+            .manual-label { font-size: 11px; }
+            .manual-input { padding: 10px; font-size: 14px; }
+            .manual-submit-btn { padding: 12px; font-size: 14px; }
+            
+            /* 월별 탭 */
+            .month-tabs { gap: 6px; margin-bottom: 16px; }
+            .month-tab { padding: 8px 14px; font-size: 13px; }
+            
+            /* 테이블 - 가로 스크롤 */
+            .record-table-wrapper { 
+                overflow-x: auto; 
+                -webkit-overflow-scrolling: touch;
+                margin: 0 -16px;
+                padding: 0 16px;
+            }
+            .record-table { min-width: 500px; }
+            .record-table th, .record-table td { 
+                padding: 10px 8px; 
+                font-size: 12px; 
+                white-space: nowrap;
+            }
+            
+            /* 종목별 현황 */
+            .item-stats-title { font-size: 13px; }
+            .bar-chart-name { font-size: 13px; }
+            .bar-chart-amount { font-size: 13px; }
+            .bar-chart-track { height: 20px; }
+            .bar-chart-percent { font-size: 10px; }
+            .bar-chart-usd { font-size: 11px; }
+            .stats-total { padding: 12px; }
+            .stats-total-label { font-size: 13px; }
+            .stats-total-value { font-size: 14px; }
+            
+            /* 모달 */
+            .modal { padding: 20px; width: 95%; }
+            .modal-title { font-size: 16px; }
+            .modal-input { padding: 12px; font-size: 14px; }
+            .modal-btn { padding: 12px; font-size: 14px; }
+            
+            /* 로그인 */
+            .auth-container { margin: 60px auto; padding: 0 12px; }
+            .auth-card { padding: 28px 20px; }
+            .auth-title { font-size: 20px; }
+            .auth-subtitle { font-size: 13px; }
+            .auth-input { padding: 12px; font-size: 14px; }
+            .auth-btn { padding: 12px; font-size: 14px; }
+        }
+        
+        /* 아주 작은 화면 (SE 등) */
+        @media (max-width: 360px) {
+            body { padding: 10px; }
+            header h1 { font-size: 20px; }
+            .salary-input { font-size: 18px; }
+            .card { padding: 14px; }
+            .summary-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+            .summary-item { padding: 12px 8px; }
+            .summary-value { font-size: 14px; }
+            .tab-btn { padding: 8px 6px; font-size: 11px; }
+            .stock-item { padding: 10px; }
+            .stock-icon { width: 32px; height: 32px; font-size: 12px; }
+        }
+
+        /* 테이블 래퍼 */
+        .record-table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
     </style>
 </head>
 <body>
@@ -353,7 +479,7 @@
                 <div class="card">
                     <div class="card-title">📅 월별 투자/적금 기록</div>
                     <div class="month-tabs" id="monthTabs"></div>
-                    <div style="overflow-x: auto;">
+                    <div class="record-table-wrapper">
                         <table class="record-table">
                             <thead><tr><th>날짜</th><th>구분</th><th>종목</th><th>금액</th><th>메모</th><th></th></tr></thead>
                             <tbody id="recordTableBody"></tbody>
