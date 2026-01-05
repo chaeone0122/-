@@ -254,34 +254,80 @@
             .manual-input { padding: 10px; font-size: 14px; }
             .manual-submit-btn { padding: 12px; font-size: 14px; }
             
-            /* 월별 탭 */
-            .month-tabs { gap: 6px; margin-bottom: 16px; }
-            .month-tab { padding: 8px 14px; font-size: 13px; }
+            /* ========== 월별 탭 최적화 ========== */
+            .month-tabs { 
+                gap: 6px; 
+                margin-bottom: 16px;
+                padding-bottom: 10px;
+                margin-left: -16px;
+                margin-right: -16px;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            .month-tab { 
+                padding: 8px 12px; 
+                font-size: 12px;
+                flex-shrink: 0;
+            }
             
-            /* 테이블 - 가로 스크롤 */
+            /* ========== 테이블 모바일 최적화 ========== */
             .record-table-wrapper { 
                 overflow-x: auto; 
                 -webkit-overflow-scrolling: touch;
                 margin: 0 -16px;
                 padding: 0 16px;
+                scrollbar-width: thin;
             }
-            .record-table { min-width: 500px; }
+            .record-table { 
+                min-width: 480px;
+                font-size: 12px;
+            }
             .record-table th, .record-table td { 
-                padding: 10px 8px; 
-                font-size: 12px; 
+                padding: 10px 6px; 
+                font-size: 11px; 
                 white-space: nowrap;
             }
+            .record-table th:first-child,
+            .record-table td:first-child { padding-left: 0; }
+            .record-table th:last-child,
+            .record-table td:last-child { 
+                padding-right: 0;
+                width: 30px;
+            }
+            /* 삭제 버튼 */
+            .record-table td button {
+                padding: 4px 8px;
+                font-size: 10px;
+            }
             
-            /* 종목별 현황 */
-            .item-stats-title { font-size: 13px; }
-            .bar-chart-name { font-size: 13px; }
-            .bar-chart-amount { font-size: 13px; }
-            .bar-chart-track { height: 20px; }
-            .bar-chart-percent { font-size: 10px; }
-            .bar-chart-usd { font-size: 11px; }
-            .stats-total { padding: 12px; }
-            .stats-total-label { font-size: 13px; }
-            .stats-total-value { font-size: 14px; }
+            /* ========== 종목별 현황 최적화 ========== */
+            .item-stats-section { margin-bottom: 20px; }
+            .item-stats-title { 
+                font-size: 12px; 
+                margin-bottom: 12px;
+            }
+            .bar-chart-item { margin-bottom: 12px; }
+            .bar-chart-header { margin-bottom: 6px; }
+            .bar-chart-name { font-size: 12px; }
+            .bar-chart-amount { font-size: 12px; }
+            .bar-chart-track { height: 18px; border-radius: 9px; }
+            .bar-chart-fill { 
+                padding-right: 6px;
+                border-radius: 9px;
+            }
+            .bar-chart-percent { font-size: 9px; }
+            .bar-chart-usd { font-size: 10px; margin-top: 2px; }
+            .stats-total { 
+                padding: 10px 12px; 
+                margin-top: 8px;
+                border-radius: 10px;
+            }
+            .stats-total-label { font-size: 12px; }
+            .stats-total-value { font-size: 13px; }
+            .no-data-message { 
+                padding: 24px; 
+                font-size: 12px; 
+            }
             
             /* 모달 */
             .modal { padding: 20px; width: 95%; }
@@ -303,13 +349,42 @@
             body { padding: 10px; }
             header h1 { font-size: 20px; }
             .salary-input { font-size: 18px; }
-            .card { padding: 14px; }
+            .card { padding: 12px; }
             .summary-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
             .summary-item { padding: 12px 8px; }
             .summary-value { font-size: 14px; }
             .tab-btn { padding: 8px 6px; font-size: 11px; }
             .stock-item { padding: 10px; }
             .stock-icon { width: 32px; height: 32px; font-size: 12px; }
+            
+            /* 월별 탭 더 작게 */
+            .month-tabs {
+                margin-left: -12px;
+                margin-right: -12px;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            .month-tab { padding: 6px 10px; font-size: 11px; }
+            
+            /* 테이블 더 작게 */
+            .record-table-wrapper {
+                margin: 0 -12px;
+                padding: 0 12px;
+            }
+            .record-table { min-width: 420px; }
+            .record-table th, .record-table td { 
+                padding: 8px 4px; 
+                font-size: 10px; 
+            }
+            
+            /* 종목별 현황 더 작게 */
+            .bar-chart-name { font-size: 11px; }
+            .bar-chart-amount { font-size: 11px; }
+            .bar-chart-track { height: 16px; }
+            .bar-chart-percent { font-size: 8px; }
+            .stats-total { padding: 8px 10px; }
+            .stats-total-label { font-size: 11px; }
+            .stats-total-value { font-size: 12px; }
         }
 
         /* 테이블 래퍼 */
